@@ -7,37 +7,166 @@
 ![Bash](https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
 
 
-**Standard Deviation (SD)** - measures how spread out individual data points are around the mean.
+# 📊 Bioinformatics Meta-Analysis Toolkit for Gene Expression
 
-**Standard Error** - measures how much the sample mean would vary if you repeated the experiment many times. Standard deviation of that distribution of sample means.
+This toolkit provides a framework for computing **effect sizes**, pooling **meta-analytic estimates**, and performing statistical analysis on **gene expression datasets**.
 
-**Cohen's d** - used for comparing two groups, calculated as the differences between group means divided by the pooled standard deviaton.
-  - Example:
-      d = (M2 - M1)/ SDpooled; M1 and M2 are the mean of the first and second groups.
-  - Hedges' g correction:
-      cf = (1-3)/(4 * (n1+n2) - 9 )
-      g = cf * (mean difference) / (pooled standard deviation)
+It helps identify genes or gene sets with **consistent differential expression across multiple studies**, supporting **biomarker discovery** and **predictive modeling**.
 
-**Pearson's r** - measures the strength of a linear relationship between two variables, with an effect size ranging from -1 to + 1.
+---
 
-**Pooled Standard Deviation** - a weighted average of standard deviation from two or more groups, used when assuming the groups have equal variances. It combines individual group varainces to provide a single, more precise estimate of the common variability across the populations.
-  - Example:
-      Pooled SD = sqrt((SD1^2 + SD2^2) / 2)
+# 📚 Statistical Concepts
 
-**Effect Size** - a statistical measure quantifying the magnitude of a relationship or difference between groups, helping to determine a finding's practical significance beyond statistical significance.
-  - Example:
-      Cohen's d, where a weight loss intervention group loses 10 kg, and the control group loses 5 kg, resulting in a Cohen's d approximately 0.67, indicating a medium effect size that is a noticeable difference in the weight loss between the groups.
-    - Interpreting Cohen's d:
-        - **0.2:** Small effect
-        - **0.5:** Medium effect
-        - **0.8:** Large effect
+## Standard Deviation (SD)
 
-**Summary Effect Size** - A combined or aggregated effect size across multiple studies or measurements. Often used in meta-analysis to produce a single estimate that represents the overall effect. 
+Measures how **spread out individual data points are around the mean**.
 
-**Bioinformatics Meta-Analysis Toolkit for Gene Expression** 
+* A **large SD** → data points are widely spread.
+* A **small SD** → data points are clustered close to the mean.
 
-This toolkit provides a robust framework for computing effect sizes, pooling meta-analytic estimates, and performing statistical analyses on gene expression datasets. It is designed to identify genes or gene sets with consistent differential expression across multiple studies, supporting biomarker discovery and predictive modeling.
+---
 
+## Standard Error (SE)
+
+Measures how much the **sample mean would vary if the experiment were repeated many times**.
+
+* Represents the **standard deviation of the distribution of sample means**.
+* Indicates the **precision of the sample mean estimate**.
+
+---
+
+# 📏 Effect Size
+
+## What is Effect Size?
+
+Effect size quantifies the **magnitude of a relationship or difference between groups**.
+
+Unlike statistical significance, it indicates **practical significance**.
+
+### Example
+
+If:
+
+* Treatment group mean weight loss = **10 kg**
+* Control group mean weight loss = **5 kg**
+
+Then:
+
+```
+Cohen's d ≈ 0.67
+```
+
+This represents a **medium effect size**, meaning the treatment had a noticeable effect.
+
+---
+
+# 📊 Cohen's d
+
+Used to **compare the difference between two group means**.
+
+### Formula
+
+```
+d = (M2 - M1) / SD_pooled
+```
+
+Where:
+
+* **M1** = Mean of group 1
+* **M2** = Mean of group 2
+* **SD_pooled** = pooled standard deviation
+
+### Interpretation
+
+| Cohen's d | Effect Size |
+| --------- | ----------- |
+| 0.2       | Small       |
+| 0.5       | Medium      |
+| 0.8       | Large       |
+
+---
+
+# 📉 Hedges' g (Bias Correction)
+
+Hedges' g corrects Cohen's d for **small sample sizes**.
+
+### Correction Factor
+
+```
+cf = (1 - 3) / (4 * (n1 + n2) - 9)
+```
+
+### Hedges' g
+
+```
+g = cf * (mean difference) / (pooled standard deviation)
+```
+
+Where:
+
+* **n1, n2** = sample sizes of the two groups
+
+---
+
+# 🔗 Pearson's r
+
+Measures the **strength and direction of a linear relationship between two variables**.
+
+### Range
+
+```
+-1  → Perfect negative relationship
+0   → No relationship
++1  → Perfect positive relationship
+```
+
+---
+
+# 🧮 Pooled Standard Deviation
+
+A **weighted average of standard deviations from multiple groups**.
+
+Used when assuming **equal variance between groups**.
+
+### Formula
+
+```
+Pooled SD = sqrt((SD1² + SD2²) / 2)
+```
+
+Where:
+
+* **SD1** = standard deviation of group 1
+* **SD2** = standard deviation of group 2
+
+---
+
+# 📦 Summary Effect Size
+
+A **combined effect size calculated across multiple studies**.
+
+Commonly used in **meta-analysis** to produce a **single overall estimate of an effect**.
+
+This allows researchers to:
+
+* Integrate results from multiple datasets
+* Increase statistical power
+* Identify consistent biological signals
+
+---
+
+# 🧬 Applications in Gene Expression Analysis
+
+This toolkit supports:
+
+* Differential gene expression meta-analysis
+* Cross-study biomarker discovery
+* Robust effect size estimation
+* Predictive modeling using gene expression profiles
+
+---
+
+⭐ Designed for **bioinformatics researchers**, **computational biologists**, and **data scientists working with genomic datasets**.
 
 
 ## Key Features 🔑:

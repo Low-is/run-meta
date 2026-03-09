@@ -1,6 +1,8 @@
 # Pipeline Development - Multi Cohort Meta-analysis
 ## Study level effect size and pooled effect size estimations, inverse variance weighting, and Fisher p-value combinataion.
 
+## Tools Used
+
 
 **Standard Deviation (SD)** - measures how spread out individual data points are around the mean.
 
@@ -77,14 +79,6 @@ This toolkit provides a robust framework for computing effect sizes, pooling met
 
 ---
 
-<!-- Prediction models side by side below -->
-<table>
-  <tr>
-    <td><img src="classification_models/DNA_internal.png" alt="Prediction Model 1" width="250"><br><center>Prediction Model 1</center></td>
-    <td><img src="classification_models/DNA_internal_14.png" alt="Prediction Model 2" width="250"><br><center>Prediction Model 2</center></td>
-    <td><img src="classification_models/internal_validation_gse69686.png" alt="Prediction Model 3" width="250"><br><center>Prediction Model 3</center></td>
-  </tr>
-</table>
 
 ---
 

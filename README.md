@@ -2,6 +2,7 @@
 ## Study level effect size and pooled effect size estimations, inverse variance weighting, and Fisher p-value combinataion.
 
 ## Tools Used
+![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
 
 
 **Standard Deviation (SD)** - measures how spread out individual data points are around the mean.

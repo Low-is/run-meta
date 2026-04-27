@@ -1,11 +1,11 @@
 library(yaml)
 library(jsonlite)
 library(COCONUT)
-source("...")
+source("run-meta/functions/meta_analysis_functions.R")
 
 # Loading config file
 message("Loading config file...")
-config <- yaml::read_yaml("Multi-Cohort_Meta-Analysis/config/config.yaml")
+config <- yaml::read_yaml("run-meta/config/config.yaml")
 message("Config file loaded!")
 
 # Loading named list of studies

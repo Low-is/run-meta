@@ -7,6 +7,6 @@ analysis:
 
   use_DEG: false
 
-  studies:
-    DNA:
-    
+  inputs:
+    dna_gse_file: "miner/outputs/dna_gse_ids.json"
+    rna_gse_file: "miner/outputs/rna_gse_ids.json"

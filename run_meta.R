@@ -1,6 +1,7 @@
 library(yaml)
 library(jsonlite)
-library(COCONUT) # need to include installation of COCONUT in setup.R script
+library(COCONUT)
+source("...")
 
 # Loading config file
 message("Loading config file...")
